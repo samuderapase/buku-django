@@ -1,0 +1,75 @@
+Instalasi django:
+
+* Download versi tarbal django 1.4.2
+  - wget http://www.djangoproject.com/m/releases/1.4/Django-1.4.2.tar.gz
+    tar xzvf Django-1.4.2.tar.gz
+    cd Django-1.4.2
+    sudo python setup.py install
+    
+* pip install django
+* easy_install django
+
+setelah proses instalasi berhasil, django berada atau berlokasi di /usr/lib/python2.4/site-packages
+untuk mengeceknya bisa menggunkan perintah : python -c 'import sys, pprint; pprint.pprint(sys.path)'
+
+Testing Django:
+
+Python 2.7.3 (default, Jul 13 2012, 22:29:01) 
+[GCC 4.7.1] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import django
+>>> django.VERSION
+(1, 4, 2, 'final', 0)
+>>> 
+
+
+Database django :
+
+*Django mensuppor 4 databases berikut dibawah ini list database:
+   * PostgreSQL (http://www.postgresql.org/)
+   * SQLite 3 (http://www.sqlite.org/)
+   * MySQL (http://www.mysql.com/)
+   * Oracle (http://www.oracle.com/)
+   
+*=================================================================
+
+Membuat project django:
+
+untuk membuat project pertama di django:
+
+* django-admin startproject projectpertama
+* gunakan perintah tree projectpertama untuk melihat directory project yang telah dibuat tadi 
+  projectpertama/
+  |-- manage.py
+  `-- projectpertama
+     |-- __init__.py
+     |-- settings.py
+     |-- urls.py
+     `-- wsgi.py
+
+   1 directory, 5 files
+* masuk ke directory projectpertama..kemudian coba runserver djangon dengan menggunakan perintah python manage.py runserver
+  shellc0de@androdev:~/buku-django/buku-django/projectpertama$ python manage.py runserver
+  Validating models...
+
+  0 errors found
+  Django version 1.4.2, using settings 'projectpertama.settings'
+  Development server is running at http://127.0.0.1:8000/
+  Quit the server with CONTROL-C.
+
+* Kemudian buka browser untuk mengakses localhost di django : http://127.0.0.1:8000/
+
+* selanjutnya kita coba buat aplikasi web: disini sy contohkan nama appnya uvt
+  
+  python manage.py start app uvt
+  
+  uvt
+  |-- __init__.py
+  |-- models.py
+  |-- tests.py
+  `-- views.py
+
+  0 directories, 4 files
+
+* konfigurasi settings.py di directory projectutama: contohnya bisa diliat di projectpertama: 
+
