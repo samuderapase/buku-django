@@ -1,0 +1,41 @@
+Pola Desain MVC Django:
+
+Sebelum melihat konsep Desaign Pattern MVC django terlebih dulu kita akan mengenal apa yang dimaksud dengan MVC:
+
+MVC (Model View Controller) merupakan cara atau konsep yang biasa digunakan oleh para programmer dalam pembuatan program yang terstruktur. 
+Konsep MVC sendiri mempunyai tiga bagian, yaitu Model, View dan controller.
+
+Berikut penjelasan konsep MVC:
+
+* Model digunakan sebagai tempat core suatu program. Model yang akan memproses semua inputan yang dimasukkan oleh user.
+
+* View sebagai tempat untuk tampilan yang secara langsung berhubungan dengan user. Atau dengan kata lain sebagai tempat inputan bagi user.
+
+* Controller, merupakan suatu (klas) pengendali yang akan mengendalikan inputan user. 
+  Controller akan mengambil inputan yang dimasukkan oleh user dan akan mengirimkannya ke klas model untuk diproses lebih lanjut. 
+  Nah disini ada video yang menjelaskan tentang konsep MVC, dimana yang bisa memakan semua inputan hanyalah model yang akan melakukan proses. 
+  Sedangkan View hanya sebagai tempat penyalur inputan tersebut. Sedang kontroller untuk mengatur inputan itu diberikan ke model yang mana.
+
+oke..sekarang kita mencoba melihat desaign pettern MVC di django: 
+
+Di django sendiri desaign petternnya dibagi kedalam empat kategori file python :
+
+* models.py
+* views.py, 
+* urls.py
+* template HTML 
+
+Berikut penjelasan dari empat kategori file python :
+
+* models.py  : berisi deskripsi tabel database, diwakili oleh kelas Python. Kelas ini disebut model. 
+               Dengan ini, Anda dapat membuat, mengambil, update dan menghapus catatan dalam database Anda menggunakan kode sederhana Python 
+               daripada menulis pernyataan SQL berulang.
+              
+* views.py   : berisi logika untuk menampilkan halaman. 
+
+* urls.py 	 : menentukan mana disebut untuk pola URL yang diberikan. contoh: url /buku/ ini akan dihandle oleh fungsi buku() yang telah kita define di views. untuk mengakses /buku/ 
+               dari url http://contoh.com/buku/ ini akan di handle oleh fungsi buku()
+
+* template 	 : template HTML yang menggambarkan desain halaman. Ini menggunakan bahasa template dengan pernyataan logika dasar.
+               template django menggunakan tag inclusian misalnya {% for x in book %} dll.  
+             
