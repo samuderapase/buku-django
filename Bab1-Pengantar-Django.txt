@@ -1,0 +1,12 @@
+Pengertian Django:
+
+Django merupakan suatu framework untuk mempermudah pengembangan aplikasi yang berbasis web. 
+Pembuatan suatu aplikasi yang berbasis web biasanya sangat kompleks dan memerlukan keahlian dan pengetahuan tentang berbagai aspek teknologi web
+misalnya: harus mengerti HTML untuk bisa membuat halaman web, harus mengerti HTTP untuk bisa mengirim/menerima informasi di web, 
+harus mengerti cara kerja web server untuk bisa menangani session/cookies/dll, 
+harus mengerti database untuk bisa menyimpan data, dst. 
+Untuk lebih memudahkan proses pengembangan aplikasi web maka hadirlah Application Framework, 
+atau disingkat framework, yang pada dasarnya merupakan kerangka (framework) agar si programmer bisa lebih mudah membuat aplikasi web. 
+Django merupakan salah satu aplikasi framework yang dibuat dengan memakai bahasa pemrograman Python.
+
+sumber : http://rahmaddawood.blogspot.com/2012/02/django-instalasi-dan-konfigurasi.html
