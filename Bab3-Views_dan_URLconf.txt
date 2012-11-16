@@ -1,0 +1,93 @@
+Melanjutkan dari bab2 untuk settings.py :
+
+Di dalam directory project utama : projectpertama: settings.py
+* Bagian pertama yang akan kita setting adalah bagian databases: 
+  disini kita mencoba menggunakan database sqlite3, berikut contoh dibawah untuk setting databases:
+  
+  DATABASES = {
+      'default': {
+         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+         'NAME': 'uvt.db',                      # Or path to database file if using sqlite3.
+         'USER': '',                      # Not used with sqlite3.
+         'PASSWORD': '',                  # Not used with sqlite3.
+         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
+         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+     }
+  }
+
+* Bagian kedua di instalasi app, masukkan app yang sudah dicreate tadi "uvt" dan uncoment "django.contrib.admin"
+
+  INSTALLED_APPS = (
+      'django.contrib.auth',
+      'django.contrib.contenttypes',
+      'django.contrib.sessions',
+      'django.contrib.sites',
+      'django.contrib.messages',
+      'django.contrib.staticfiles',
+      'uvt',
+      # Uncomment the next line to enable the admin:
+      'django.contrib.admin',
+      # Uncomment the next line to enable admin documentation:
+      # 'django.contrib.admindocs', 
+  )
+
+* settings.py disimpan dan kemudian kita singkronisasi database dengan perintah : python manage.py syncdb
+  python manage.py syncdb
+  Creating tables ...
+  Creating table auth_permission
+  Creating table auth_group_permissions
+  Creating table auth_group
+  Creating table auth_user_user_permissions
+  Creating table auth_user_groups
+  Creating table auth_user
+  Creating table django_content_type
+  Creating table django_session
+  Creating table django_site
+
+  You just installed Django's auth system, which means you don't have any superusers defined.
+  Would you like to create one now? (yes/no): yes
+  Username (leave blank to use 'shellc0de'): 
+  E-mail address: s@gmail.com
+  Password: 
+  Password (again): 
+  Superuser created successfully.
+  Installing custom SQL ...
+  Installing indexes ...
+  Installed 0 object(s) from 0 fixture(s)
+
+
+============================================================================================================================================
+
+* Konfigurasi urls.py dan views.py
+  
+
+* urls.py : uncoment untuk dua baris mengenabel admin dan view.home perhatikan konfigurasi dibawah ini:
+
+  from django.conf.urls import patterns, include, url
+  from django.contrib import admin
+  admin.autodiscover()
+
+  urlpatterns = patterns('',
+     # Examples:
+     # url(r'^$', 'uvt.views.home', name='home'),
+     # url(r'^projectpertama/', include('projectpertama.foo.urls')),
+
+     # Uncomment the admin/doc line below to enable admin documentation:
+     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+
+     # Uncomment the next line to enable the admin:
+     url(r'^admin/', include(admin.site.urls)),
+ )
+
+* views.py
+
+  from django.shortcuts import render_to_response
+  from django.http import HttpResponseRedirect, HttpResponse
+  from models import *
+
+  def home(request):
+      return render_to_respone ('base.html')
+
+* Kemudian runserver : python manage.py runserver 
+
+* Akses localhost di browser : http://127.0.0.1:8000/admin : masuk keadmin menggunakan user dan pass yang telah kita create dari syncdb:
