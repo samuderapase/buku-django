@@ -1,3 +1,4 @@
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -101,6 +102,7 @@ ROOT_URLCONF = 'projectpertama.urls'
 WSGI_APPLICATION = 'projectpertama.wsgi.application'
 
 TEMPLATE_DIRS = (
+    "/home/shellc0de/buku-django/buku-django/projectpertama/templates",
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
