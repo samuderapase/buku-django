@@ -21,11 +21,12 @@ Daftar isi Buku Django
 * Bab 19: Internasionalisasi
 * Bab 20: Keamanan
 
-Lampiran A: Model Referensi Definisi
-Lampiran B: Database API Reference
-Lampiran C: Referensi View Generic
-Lampiran D: Pengaturan
-Lampiran E: Built-in Tag Template dan Filter
-Lampiran F: Utility Django-admin
-Lampiran G: Permintaan dan Respon Objects
-Lisensi & Hak Cipta
+*Lampiran A: Model Referensi Definisi
+*Lampiran B: Database API Reference
+*Lampiran C: Referensi View Generic
+*Lampiran D: Pengaturan
+*Lampiran E: Built-in Tag Template dan Filter
+*Lampiran F: Utility Django-admin
+*Lampiran G: Permintaan dan Respon Objects
+
+
